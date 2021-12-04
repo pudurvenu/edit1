@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap');
+
+body{
+background-image: linear-gradient(to bottom right,#140152, #04052E);
+height: 100%;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+.container nav{
+  display: flex;
+height: 50px;
+overflow: hidden;
+text-align: center;
+align-items: center;
+padding: 10px;
+  justify-content: space-around;
+  color: black;
+  background: white;
+}
+.container nav .logo{
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.container nav .logo ul{
+
+}
+
+.container nav ul{
+
+
+}
+.container nav ul li{
+  list-style: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container nav ul li span{
+border: 3px solid black;
+padding: 8px;
+display: block;
+border-radius: 5px;
+background: #140152;
+color: white;
+width: 70px;
+}
+.container nav ul li span:hover{
+background: white;
+color: black;
+border: 3px solid black;
+}
+
+
+
+.center{
+  margin: auto;
+  width: 50%;
+margin-top: 50px;
+
+  padding: 100px;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+input[type=text], select{
+font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  color: white;
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px;
+  border-radius: 4px;
+  box-sizing:  border-box;
+  background: transparent;
+  filter: brightness(40%);
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+textarea{
+  border-radius: 3px;
+  background: transparent;
+  border: 0px;
+  color: white;
+  font-family: 'EB Garamond', serif;
+    font-size: 18px;
+  text-indent: 20px;
+  filter: brightness(100%);
+}
+
+input[type=submit], select{
+  width: 110px;
+  padding: 12px 20px;
+  margin: 8px 0;
+color: white;
+    background: transparent;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 4px;
+    font-size: 15px;
+  box-sizing:  border-box;
+
+}
+input[type=submit]:hover{
+
+
+  border: 1px solid black;
+  background: white;
+  color: black;
+  font-size: 15px;
+transition: 0.8s delay;
+}
+
+::placeholder {
+  color: white;
+
+}
+
+
+.textedit{
+  width: 90%;
+  margin: 5% 5% 5% 5%;
+  height: 50px;
+  color: white;
+  border: none;
+  caret-color: grey;
+font-size: 25px;
+}
+
+
+.textedit1{
+  width: 90%;
+  margin: 5% 5% 5% 5%;
+  height: 50px;
+  color: white;
+  border: none;
+  caret-color: grey;
+
+}
+
+.textedit:focus{
+  outline: none;
+}
+
+.textedit1:focus{
+  outline: none;
+}
+
+
+[contentEditable=true]:empty:not(:focus):before{
+  content: attr(data-text);
+  color: grey;
+  font-style: italic;
+    font-size: 25px;
+}
+
+
+.tools{
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+    width: 30%;
+
+}
+
+.tools span{
+  color: white;
+}

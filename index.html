@@ -1,0 +1,164 @@
+/button<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
+  </head>
+  <body>
+
+<div class="container">
+  <nav>
+
+
+  <div class="logo">
+    <ul>
+      Article
+    </ul>
+
+  </div>
+
+
+
+
+  <ul>
+
+    <li><span>Sign in</span></li>
+  </ul>
+  </nav>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <form class="" action="index.php" method="post">
+
+
+
+<!-- here goes editable lines for user------------------------->
+
+
+<input type="hidden" id="my_color" name="colortext" value="">
+
+<input type="hidden" id="fontsize" name="textsize" value="">
+
+<textarea hidden="hidden" id="my_text" name="para"></textarea>
+
+
+  <input type="submit" name="submit" value="Submit" onclick="edit()">
+
+  </form>
+
+
+
+
+
+
+ <input id="colorpick" type="color" value="#ffffff">
+
+ <input type="number" id="textsize" value="">
+
+<div class="textedit1 textpara" id="para" contenteditable=true data-text="Write Article here" onclick = "edit()"></div>
+  <input type="button" onclick="edit()">
+
+
+
+<div class="tools">
+
+  <span id="span"></span><br><br>
+ <span id="span1"></span>
+ <span id="displayfontsize"></span>
+  </div>
+
+
+
+  </body>
+
+<script>
+
+
+
+function edit(){
+
+  var paraa = document.getElementById("para").innerHTML;
+
+  document.getElementById("my_text").value = document.getElementById("para").innerHTML;
+
+
+
+
+   document.getElementById("para").style.color = document.getElementById("colorpick").value;
+      document.getElementById("my_color").value = document.getElementById("para").style.color;
+
+
+
+
+  document.getElementById("span").innerHTML = document.getElementById("para").innerHTML;
+
+
+
+      document.getElementById("span").style.color = document.getElementById("para").style.color;
+
+    document.getElementById("span1").innerHTML = document.getElementById("para").style.color;
+
+
+
+
+
+//----------------------- here goes font change------------------
+
+
+  document.getElementById("fontsize").value = document.getElementById("textsize").value;
+
+
+
+
+var rangeslider = document.getElementById("textsize");
+var spantxt = document.getElementById("displayfontsize");
+spantxt.innerHTML = rangeslider.value;
+rangeslider.oninput = function()
+{
+  spantxt.innerHTML = this.value;
+
+}
+
+
+$(document).ready(function(){
+  $("#textsize").on("input",function(){
+    var txtchange = $(this).val();
+    $(".textpara").css("font-size", txtchange+"px");
+  });
+});
+
+
+
+
+
+
+
+
+
+}
+
+
+</script>
+
+
+
+</html>
